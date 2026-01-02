@@ -3,62 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasıta İlan Detayı</title>
+    <title>Araç Satış Sayfası</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f8f9fa; color: #333; }
-        .header { background-color: #3e3e3e; color: #ffe800; padding: 10px; text-align: center; font-weight: bold; font-size: 20px; }
-        .container { max-width: 600px; margin: auto; background: white; }
-        .price-bar { background: #fdf6cc; padding: 15px; border-bottom: 2px solid #ffe800; display: flex; justify-content: space-between; align-items: center; }
-        .price { color: #d91d1d; font-size: 24px; font-weight: bold; }
-        .location { font-size: 14px; color: #666; }
-        .main-img { width: 100%; display: block; }
-        .specs { padding: 15px; }
-        .spec-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+        :root { --main-color: #ffe800; --text-dark: #333; --red: #d91d1d; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: #f4f4f4; color: var(--text-dark); }
+        
+        /* Header & Price Bar */
+        .top-nav { background: #333; color: var(--main-color); padding: 15px; text-align: center; font-weight: bold; font-size: 1.2rem; }
+        .price-section { background: #fff; padding: 20px; border-bottom: 3px solid var(--main-color); text-align: center; }
+        .price { color: var(--red); font-size: 2rem; font-weight: 900; }
+        .vehicle-title { font-size: 1.1rem; margin-top: 5px; color: #555; }
+
+        /* Gallery */
+        .gallery { background: #000; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+        .gallery img { width: 100%; flex-shrink: 0; scroll-snap-align: start; max-height: 400px; object-fit: contain; }
+
+        /* Specs Table */
+        .content { max-width: 600px; margin: auto; background: #fff; }
+        .spec-list { padding: 0; margin: 0; list-style: none; }
+        .spec-item { display: flex; justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
         .spec-label { color: #888; }
-        .spec-value { font-weight: 600; color: #111; }
-        .description-box { padding: 15px; background: #fafafa; margin: 10px; border-radius: 5px; border: 1px solid #eee; }
-        .description-title { font-weight: bold; margin-bottom: 10px; color: #333; display: block; border-bottom: 2px solid #ffe800; width: fit-content; }
-        .contact-btn { display: block; background: #25d366; color: white; text-align: center; padding: 15px; margin: 15px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 18px; }
-        .footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
+        .spec-value { font-weight: bold; }
+
+        /* Description */
+        .description { padding: 20px; line-height: 1.6; font-size: 0.95rem; }
+        .section-title { font-weight: bold; border-left: 4px solid var(--main-color); padding-left: 10px; margin-bottom: 15px; }
+
+        /* Action Buttons */
+        .sticky-contact { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: #fff; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); gap: 10px; }
+        .btn { flex: 1; text-align: center; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; color: white; }
+        .btn-call { background: #007bff; }
+        .btn-whatsapp { background: #25d366; }
+        
+        .spacer { height: 80px; }
     </style>
 </head>
 <body>
 
-<div class="header">İlan Detayları</div>
+<div class="top-nav">ARAÇ DETAY SAYFASI</div>
 
-<div class="container">
-    <div class="price-bar">
-        <div>
-            <span class="location">Ankara / Çankaya</span><br>
-            <strong>Volkswagen Golf 1.5 eTSI Style</strong>
-        </div>
-        <div class="price">1.450.000 TL</div>
+<div class="price-section">
+    <div class="price">1.250.000 TL</div>
+    <div class="vehicle-title">2020 Volkswagen Golf 1.5 eTSI Style</div>
+</div>
+
+<div class="gallery">
+    <img src="https://via.placeholder.com/600x400?text=On+Gorunus">
+    <img src="https://via.placeholder.com/600x400?text=Ic+Mekan">
+    <img src="https://via.placeholder.com/600x400?text=Ekspertiz">
+</div>
+
+<div class="content">
+    <ul class="spec-list">
+        <li class="spec-item"><span class="spec-label">Kilometre</span><span class="spec-value">42.500 km</span></li>
+        <li class="spec-item"><span class="spec-label">Vites</span><span class="spec-value">Otomatik</span></li>
+        <li class="spec-item"><span class="spec-label">Yakıt</span><span class="spec-value">Hibrit/Benzin</span></li>
+        <li class="spec-item"><span class="spec-label">Boya/Değişen</span><span class="spec-value">Tamamen Orijinal</span></li>
+        <li class="spec-item"><span class="spec-label">Muayene</span><span class="spec-value">12.06.2027</span></li>
+    </ul>
+
+    <div class="description">
+        <div class="section-title">AÇIKLAMA</div>
+        <p>Aracın ilk sahibiyim. Sadece hafta sonları kapalı otoparktan çıkarılmıştır. İçinde sigara içilmemiş, sıfır kokusu üzerindedir. Tüm yetkili servis kayıtları mevcuttur.</p>
+        <p>Extra olarak cam filmi ve seramik kaplama yaptırılmıştır.</p>
     </div>
+</div>
 
-    <img src="https://via.placeholder.com/600x400?text=Arac+Resmi" class="main-img" alt="Araç">
+<div class="spacer"></div>
 
-    <div class="specs">
-        <div class="spec-row"><span class="spec-label">İlan No</span><span class="spec-value">#10293847</span></div>
-        <div class="spec-row"><span class="spec-label">Model Yılı</span><span class="spec-value">2021</span></div>
-        <div class="spec-row"><span class="spec-label">Kilometre</span><span class="spec-value">32.000</span></div>
-        <div class="spec-row"><span class="spec-label">Vites Tipi</span><span class="spec-value">Yarı Otomatik</span></div>
-        <div class="spec-row"><span class="spec-label">Yakıt Tipi</span><span class="spec-value">Hibrit</span></div>
-        <div class="spec-row"><span class="spec-label">Boya/Değişen</span><span class="spec-value">Hatasız</span></div>
-    </div>
-
-    <div class="description-box">
-        <span class="description-title">Açıklama</span>
-        <p style="font-size: 14px; line-height: 1.6;">
-            İlk sahibinden, sigara içilmemiş, servis bakımlı tertemiz araç. 
-            Garantisi devam etmektedir. Yedek anahtarı ve kitapçıkları mevcuttur.
-        </p>
-    </div>
-
-    <a href="https://wa.me/905464845599" class="contact-btn">WhatsApp İle Soru Sor</a>
-
-    <div class="footer">
-        Bu ilan araç sahibi tarafından özel olarak oluşturulmuştur.
-    </div>
+<div class="sticky-contact">
+    <a href="tel:+905XXXXXXXXXX" class="btn btn-call">Hemen Ara</a>
+    <a href="https://wa.me/905XXXXXXXXXX" class="btn btn-whatsapp">WhatsApp Mesaj</a>
 </div>
 
 </body>
