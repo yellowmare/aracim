@@ -3,39 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satılık Araç</title>
+    <title>Vasıta İlan Detayı</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; text-align: center; color: #333; }
-        .container { max-width: 500px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
-        h1 { margin: 10px 0; font-size: 22px; }
-        .price { font-size: 28px; color: #e74c3c; font-weight: bold; margin-bottom: 20px; }
-        .info-grid { text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-        .info-item { background: #f9f9f9; padding: 10px; border-radius: 5px; font-size: 14px; }
-        .description { text-align: left; line-height: 1.5; border-top: 1px solid #eee; padding-top: 15px; }
-        .btn { display: block; background: #25d366; color: white; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; font-size: 18px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f8f9fa; color: #333; }
+        .header { background-color: #3e3e3e; color: #ffe800; padding: 10px; text-align: center; font-weight: bold; font-size: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; }
+        .price-bar { background: #fdf6cc; padding: 15px; border-bottom: 2px solid #ffe800; display: flex; justify-content: space-between; align-items: center; }
+        .price { color: #d91d1d; font-size: 24px; font-weight: bold; }
+        .location { font-size: 14px; color: #666; }
+        .main-img { width: 100%; display: block; }
+        .specs { padding: 15px; }
+        .spec-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+        .spec-label { color: #888; }
+        .spec-value { font-weight: 600; color: #111; }
+        .description-box { padding: 15px; background: #fafafa; margin: 10px; border-radius: 5px; border: 1px solid #eee; }
+        .description-title { font-weight: bold; margin-bottom: 10px; color: #333; display: block; border-bottom: 2px solid #ffe800; width: fit-content; }
+        .contact-btn { display: block; background: #25d366; color: white; text-align: center; padding: 15px; margin: 15px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 18px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>HONDA CR-Z</h1>
-        <div class="price">500.000 TL</div>
-        
-        <img src="https://via.placeholder.com/500x300?text=Arac+Resmi" alt="Araç">
 
-        <div class="info-grid">
-            <div class="info-item"><strong>Yıl:</strong> 2020</div>
-            <div class="info-item"><strong>KM:</strong> 50.000</div>
-            <div class="info-item"><strong>Yakit:</strong> Benzin</div>
-            <div class="info-item"><strong>Vites:</strong> Otomatik</div>
+<div class="header">İlan Detayları</div>
+
+<div class="container">
+    <div class="price-bar">
+        <div>
+            <span class="location">Ankara / Çankaya</span><br>
+            <strong>Volkswagen Golf 1.5 eTSI Style</strong>
         </div>
-
-        <div class="description">
-            <p><strong>Ekspertiz:</strong> Hatasız, boyasız, değişensiz.</p>
-            <p><strong>Not:</strong> Tüm bakımları zamanında yapılmıştır. Yedek anahtarı mevcuttur.</p>
-        </div>
-
-        <a href="https://wa.me/905XXXXXXXXXX" class="btn">WhatsApp'tan Mesaj At</a>
+        <div class="price">1.450.000 TL</div>
     </div>
+
+    <img src="https://via.placeholder.com/600x400?text=Arac+Resmi" class="main-img" alt="Araç">
+
+    <div class="specs">
+        <div class="spec-row"><span class="spec-label">İlan No</span><span class="spec-value">#10293847</span></div>
+        <div class="spec-row"><span class="spec-label">Model Yılı</span><span class="spec-value">2021</span></div>
+        <div class="spec-row"><span class="spec-label">Kilometre</span><span class="spec-value">32.000</span></div>
+        <div class="spec-row"><span class="spec-label">Vites Tipi</span><span class="spec-value">Yarı Otomatik</span></div>
+        <div class="spec-row"><span class="spec-label">Yakıt Tipi</span><span class="spec-value">Hibrit</span></div>
+        <div class="spec-row"><span class="spec-label">Boya/Değişen</span><span class="spec-value">Hatasız</span></div>
+    </div>
+
+    <div class="description-box">
+        <span class="description-title">Açıklama</span>
+        <p style="font-size: 14px; line-height: 1.6;">
+            İlk sahibinden, sigara içilmemiş, servis bakımlı tertemiz araç. 
+            Garantisi devam etmektedir. Yedek anahtarı ve kitapçıkları mevcuttur.
+        </p>
+    </div>
+
+    <a href="https://wa.me/905XXXXXXXXXX" class="contact-btn">WhatsApp İle Soru Sor</a>
+
+    <div class="footer">
+        Bu ilan araç sahibi tarafından özel olarak oluşturulmuştur.
+    </div>
+</div>
+
 </body>
 </html>
